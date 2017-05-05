@@ -157,11 +157,10 @@ img{
     font-weight: bolder;
 }
 .article img{
-    display: inline;
+    display: inline-block;
     position: relative;
-    float: left;
-    width: 100%;
     height: 250px;
+    width: 100%;
 }
 .article p{
     display: inline;
