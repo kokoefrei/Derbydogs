@@ -1,3 +1,8 @@
+<?php 
+	include_once '../Models/Home.php';
+	$news = news();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -28,18 +33,35 @@
             </div>
             
             <div class="article">
-                <img src="../Img/sufferingDog.jpg" alt="sad Dog">
-                Lot of dogs in the street are suffering
+            	<h2><?php echo $news[0][1]?></h2>
+            	<p>Published Date : <?php echo $news[0][0]?></p>
+                <!-- <img src="../Img/sufferingDog.jpg" alt="sad Dog"> -->
+                <img alt="news1" src="<?php echo $news[0][2]?>">
+                <?php echo $news[0][3]?>
             </div>
             
             <div class="article">
-                <img src="../Img/heroDog.jpg" alt="hero dog" >
-                We can be their heroes
+                <h2><?php echo $news[1][1]?></h2>
+            	<p>Published Date : <?php echo $news[1][0]?></p>
+                <!-- <img src="../Img/sufferingDog.jpg" alt="sad Dog"> -->
+                <img alt="news2" src="<?php echo $news[1][2]?>">
+                <?php echo $news[1][3]?>
             </div>
             
             <div class="article">
-                <img src="../Img/headerDog.jpg" alt="happy dogs">
-                And ensure them a better life
+                <h2><?php echo $news[2][1]?></h2>
+            	<p>Published Date : <?php echo $news[2][0]?></p>
+                <!-- <img src="../Img/sufferingDog.jpg" alt="sad Dog"> -->
+                <img alt="news3" src="<?php echo $news[2][2]?>">
+                <?php echo $news[2][3]?>
+            </div>
+            
+            <div class="article">
+                <h2><?php echo $news[3][1]?></h2>
+            	<p>Published Date : <?php echo $news[3][0]?></p>
+                <!-- <img src="../Img/sufferingDog.jpg" alt="sad Dog"> -->
+                <img alt="news4" src="<?php echo $news[3][2]?>">
+                <?php echo $news[3][3]?>
             </div>
             
         </div>
