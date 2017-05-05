@@ -1,0 +1,128 @@
+@https: //www.google.com /fonts/#QuickUsePlace:quickUse ; 
+
+/****************************************************TAGS*****************************************************/
+html {
+        background-color: darkgray;
+        background-size: /*cover contain  length intitial inherit*/ auto;
+        padding: 0.1%;
+}
+
+body {
+    margin: 1%;
+	padding: 1%;
+	background-color: gainsboro;
+}
+
+img{
+    width: 20%;
+}
+
+/*******************************************************ID*****************************************************/
+
+#head{
+    display: inline-block;
+    position: relative;
+	width: 100%;  
+	background-color: darkolivegreen;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+	color: black;
+	margin-top: auto;
+}
+#section{
+    float: left;
+    width: 100%;
+    background-color: darkgray;
+    margin-top: 1%;
+	margin-bottom: 1%;
+}
+#foot{
+    display: inline-block;
+    position: relative;
+	width: 100%;
+	background-color: darkolivegreen;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+    font-weight: bolder;
+    font-family: sans-serif;
+	color: black;
+}
+#navFoot{
+    float: left;
+    clear: both;
+    display: block;
+    position: relative;
+	width: 100%;
+    height: 40%;   
+	background-color: antiquewhite;
+	margin-top: 1%;
+}
+
+/********************************************************CLASSES*****************************************************/
+.bodyHead{
+    margin: 7%;
+    margin-bottom: 7%;
+    font-family: sans-serif,cursive;
+    text-shadow: 2px 2px lightblue;
+    font-stretch: expanded;
+    font-style: italic;
+    font-size: 100%;
+    margin: 2%;
+    text-align: justify;
+    font-weight: bolder;
+}
+.menu{
+    display: inline;
+    position: relative;
+    align-content: center;
+    font-family: sans-serif,cursive;
+    text-shadow: 2px 2px lightblue;
+    font-stretch: expanded;
+    font-style: italic;
+    font-size: 100%;
+    text-align: center;
+    font-weight: bolder;
+    border-radius: 2%;
+    margin: 3%;
+    padding: 2%;
+}
+
+
+/* unvisited link */
+.menu a:link {
+    color: darkcyan;
+    text-decoration: none;
+}
+
+/* visited link */
+.menu a:visited {
+    color: deeppink;
+    text-decoration: none;
+}
+
+/* mouse over link */
+.menu a:hover {
+    color: blue;
+    text-decoration: none;
+}
+
+/* selected link */
+.menu a:active {
+    background-color: deeppink;
+    text-decoration: none;
+}
+.article{
+    display: inline;
+    position: relative;
+    float: left;
+	/*border: 1px solid darkolivegreen;*/
+    margin: 2%;
+    margin-bottom: 7%;
+    font-family: sans-serif,cursive;
+    text-shadow: 2px 2px lightblue;
+    font-stretch: expanded;
+    font-style: italic;
+    font-size: 100%;
+    text-align: center;
+    font-weight: bolder;
+}
