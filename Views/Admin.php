@@ -16,10 +16,10 @@
 			
         <div id="nav">
             <nav> 
-                <div class="menu"><a href="Home.html">Home</a></div>
-                <div class="menu"><a href="DogSearch.html">Dog search</a></div>
-                <div class="menu"><a href="SponsorADog.html">Sponsor a dog</a></div>
-                <div class="menu"><a href="Admin.html">Administrator</a></div>
+                <div class="menu"><a href="Home.php">Home</a></div>
+                <div class="menu"><a href="DogSearch.php">Dog search</a></div>
+                <div class="menu"><a href="SponsorADog.php">Sponsor a dog</a></div>
+                <div class="menu"><a href="Admin.php">Administrator</a></div>
             </nav>  
         </div>
 		<div id="section">
@@ -63,7 +63,7 @@
                     2017 Derby Dogs<br>
                     Derby, UK
                 </address>
-                <p>Copyright</p>
+                <p>Copyright (c)</p>
             </footer>
 		</div>
 	

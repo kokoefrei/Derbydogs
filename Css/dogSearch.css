@@ -5,7 +5,6 @@ html {
         background-color: darkolivegreen;
         background-size: /*cover contain  length intitial inherit*/ auto;
         padding: 0.1%;
-        overflow: hidden;
 }
 
 body {
@@ -53,14 +52,17 @@ img{
 }
 
 #section{
+    display: inline-block;
+    position: relative;
     float: left;
+    clear: both;
     width: 100%;
     background-color: darkseagreen;
     margin-top: 1%;
 	margin-bottom: 1%;
 }
 #navFoot{
-    float: left;
+   float: left;
     clear: both;
     display: block;
     position: relative;
@@ -111,7 +113,7 @@ img{
     text-decoration: none;
 }
 .article{
-    display: inline;
+    display: inline-block;
     position: relative;
     float: left;
 	/*border: 1px solid darkolivegreen;*/
@@ -125,7 +127,37 @@ img{
     text-align: center;
     font-weight: bolder;
 }
-.form{
+
+.result{
+	display: inline-block;
+    position: relative;
+    float: left;
+    width: 30%;
+    height: 300px;
+	border: 1px solid darkolivegreen;
+    margin: 1%;
+    padding: 0.5%;
+    overflow-y: auto;
+    font-family: sans-serif,cursive;
+    text-shadow: 2px 2px lightblue;
+    font-stretch: expanded;
+    font-style: italic;
+    font-size: 100%;
+    text-align: center;
+    font-weight: bolder;
+}
+.result img{
+    display: inline-block;
+    position: relative;
+    height: 250px;
+    width: 100%;
+}
+.result p{
     display: inline;
+    position: relative;
+}
+
+.form{
+    display: inline-block;
 }
 

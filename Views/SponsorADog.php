@@ -1,7 +1,8 @@
 <?php
 	include_once '../Models/SponsorADog.php';
 	$listdog = doglist();
-?>
+
+ ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +32,7 @@
         <div id="section">
             <div class="introducing">
                 <p>
-                	Sponsor a dog to help us keep him alive, healthy and be his hero.
-                	Find below the list of dogs that are not yet adopted !!
+                Sponsor a dog to help us keep him alive, healthy and be his hero.
                 </p>
                 <p>Make it in just 3 steps:</p>
                 <ol>
@@ -44,25 +44,24 @@
                     <input type="button" value="Choose a dog">
                 </a>
             </div>
-            <?php 
-            	$i = 0;
-            	while ($i < sizeOf($listdog))
-            	{
-            		echo 
-	            		'<div class="article">
-							<h2> NAME: '.$listdog[$i][0].'</h2>
-							<p> AGE: '.$listdog[$i][1].' years</p>
-							<p> GENDER: '.$listdog[$i][3].'</p>
-							<p><img src="'.$listdog[$i][2].'" alt="not adopted dog"></p>
-		            		<p>
-								DESCRIPTION: '.$listdog[$i][4].'
-								<a href="'.$listdog[$i][2].'">...READ MORE</a>
-		            		</p>
-	            		</div>';
-            		$i++;
-            	}
-            
-            ?>
+            <?php
+	            $i = 1;
+	            while ($i < sizeOf($listdog)){
+	            	echo '<div class="article">
+									<h2> NAME: '.$listdog[$i][0].'</h2>
+									<p> AGE: '.$listdog[$i][1].' years</p>
+									<p> GENDER: '.$listdog[$i][3].'</p>
+									<p><img src="'.$listdog[$i][2].'" alt="not adopted dog"></p>
+				            		<p>
+										DESCRIPTION: '.$listdog[$i][4].'
+										<a href="'.$listdog[$i][2].'">...READ MORE</a>
+				            		</p>
+			            			</div>';
+	            	$i++;
+	            }
+			?>
+        </div>
+        
         
         <div id="navFoot">
             <nav> 
@@ -80,7 +79,7 @@
                     2017 Derby Dogs<br>
                     Derby, UK
                 </address>
-                <p>Copyright</p>
+                <p>Copyright (c)</p>
             </footer>
 		</div>
 	
