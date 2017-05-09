@@ -1,6 +1,7 @@
 <?php 
 	include_once '../Models/DogSearch.php';
 	$breedOption = breedOption();
+	$colorOption = colorOption();
 	/*  if (isset($_POST['submit']))
 	{
 		extract($_POST);
@@ -73,12 +74,22 @@
             <div class="article">
                 <form action="#" method="POST">
                     <fieldset>
-                        <legend>SEARCH BY AGE AND COLOUR</legend>
+                        <legend>SEARCH BY AGE AND COLOR</legend>
                         <div class="form">
                             <label for="dogAge">Age:</label>
-                            <input type="date" name="bdate" id="dogAge">
-                            <label for="dogColor">Colour:</label>
-                            <input type="color" name="favcolor" value="#ff0000" id="dogColor">
+<!--                             	<input type="date" name="bdate" id="dogAge"> -->
+								<input type="number" name="bdate" id="dogAge">
+                            <label for="dogColor">Color:</label>
+	                            <select name="favcolor" id="dogColor">
+		                            <?php 
+		                                	$i = 0;
+		                                	while ($i < sizeOf($colorOption))
+		                                	{
+		                                		echo '<option>'.$colorOption[$i][0].'</option>';
+		                                		$i++;
+		                                	}
+		                             ?>
+	                             </select>
                             <input type="submit" name="submit3" value="Search">
                         </div>
                     </fieldset>
@@ -133,8 +144,31 @@
 		            			</div>';
         						$i++;
         					}
-        				}
-						
+        				}	
+					}
+				}
+				
+				if (isset($_POST['submit3']))
+				{
+					extract($_POST);
+					
+					if (isset($bdate) && isset($favcolor)){
+						$complexResult = complexSearch($bdate, $favcolor);
+						$i = 0;
+						echo '<h1> Results of your age & color search : </h1>';
+						while ($i < sizeOf($complexResult)){
+							echo '<div class="result">
+								<h2> NAME: '.$complexResult[$i][0].'</h2>
+								<p> AGE: '.$complexResult[$i][1].' years</p>
+								<p> GENDER: '.$complexResult[$i][3].'</p>
+								<p><img src="'.$complexResult[$i][2].'" alt="not adopted dog"></p>
+			            		<p>
+									DESCRIPTION: '.$complexResult[$i][4].'
+									<a href="'.$complexResult[$i][2].'">...READ MORE</a>
+			            		</p>
+		            			</div>';
+							$i++;
+						}
 					}
 				}
 			?>
