@@ -47,7 +47,7 @@
             <?php
 	            $i = 1;
 	            while ($i < sizeOf($listdog)){
-	            	echo '<div class="article">
+	            	echo '<div class="article" id="scrollbar">
 									<h2> NAME: '.$listdog[$i][0].'</h2>
 									<p> AGE: '.$listdog[$i][1].' years</p>
 									<p> GENDER: '.$listdog[$i][3].'</p>

@@ -71,6 +71,30 @@ img{
 	background-color: antiquewhite;
 	margin-top: 1%;
 }
+
+#scrollbar{
+/* 	margin-left: 30%; */
+/* 	float: left; */
+	background: #F5F5F5;
+	overflow-y: auto;
+	margin-bottom: 1%;
+}
+#scrollbar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
 /********************************************************CLASSES*****************************************************/
 .menu{
     display: inline;
@@ -129,15 +153,22 @@ img{
 }
 
 .result{
-	display: inline-block;
-    position: relative;
+	display: inline;
+    position: inherit;
     float: left;
-    width: 30%;
+    width: 25%;
     height: 300px;
-	border: 1px solid darkolivegreen;
+/* 	border: 1px solid darkolivegreen; */
+	border-bottom: 1px solid darkolivegreen;
+	border-top: 1px solid darkolivegreen;
+	border-style: groove;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
     margin: 1%;
     padding: 0.5%;
-    overflow-y: auto;
+    overflow: auto;
     font-family: sans-serif,cursive;
     text-shadow: 2px 2px lightblue;
     font-stretch: expanded;
@@ -152,12 +183,32 @@ img{
     height: 250px;
     width: 100%;
 }
-.result p{
-    display: inline;
-    position: relative;
-}
+/* .result p{ */
+/*     display: inline; */
+/*     position: relative; */
+/* } */
+
 
 .form{
     display: inline-block;
+}
+
+.baniere{
+	display: inline-block;;
+	position: relative;
+	height: 20px;
+	width: 100%;
+	border-bottom: 1px solid darkolivegreen;
+	border-top: 1px solid darkolivegreen;
+	border-style: groove;
+	border-radius: 5em;
+	background-color: gray;
+	font-family: sans-serif,cursive;
+    text-shadow: 2px 2px lightblue;
+    font-stretch: expanded;
+    font-style: italic;
+    font-size: 100%;
+    text-align: center;
+    font-weight: bolder;
 }
 

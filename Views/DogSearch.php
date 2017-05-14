@@ -103,9 +103,9 @@
 					if (isset($nom)){
 						$nameResult = nameSearch($nom);
 						$i = 0;
-						echo '<h1> Results of your search by name : </h1>';
+						echo '<div class="baniere"> Results of your search by name : </div>';
 						while ($i < sizeOf($nameResult)){
-							echo '<div class="result">
+							echo '<div class="result" id="scrollbar">
 								<h2> NAME: '.$nameResult[$i][0].'</h2>
 								<p> AGE: '.$nameResult[$i][1].' years</p>
 								<p> GENDER: '.$nameResult[$i][3].'</p>
@@ -127,12 +127,12 @@
 					if (isset($_POST['breed'])){
 						$breedResult = breedSearch($breed);
 						$i = 0;
-						echo '<h1> Results of your search by breed : </h1>';
+						echo '<div class="baniere"> Results of your search by breed : </div>';
 						if (sizeOf($breedResult)==0)
 							echo '<h3>NO RESULTS</h3>';
         				elseif (sizeOf($breedResult > 0)) {
         					while ($i < sizeOf($breedResult)){
-        						echo '<div class="result">
+        						echo '<div class="result" id="scrollbar">
 								<h2> NAME: '.$breedResult[$i][0].'</h2>
 								<p> AGE: '.$breedResult[$i][1].' years</p>
 								<p> GENDER: '.$breedResult[$i][3].'</p>
@@ -155,12 +155,12 @@
 					if (isset($bdate) && isset($favcolor)){
 						$complexResult = complexSearch($bdate, $favcolor);
 						$i = 0;
-						echo '<h1> Results of your age & color search : </h1>';
+						echo '<div class="baniere"> Results of your age & color search : </div>';
 						while ($i < sizeOf($complexResult)){
-							echo '<div class="result">
+							echo '<div class="result" id="scrollbar">
 								<h2> NAME: '.$complexResult[$i][0].'</h2>
-								<p> AGE: '.$complexResult[$i][1].' years</p>
-								<p> GENDER: '.$complexResult[$i][3].'</p>
+								AGE: '.$complexResult[$i][1].' years
+								-GENDER: '.$complexResult[$i][3].'
 								<p><img src="'.$complexResult[$i][2].'" alt="not adopted dog"></p>
 			            		<p>
 									DESCRIPTION: '.$complexResult[$i][4].'

@@ -72,6 +72,29 @@ img{
 	margin-top: 1%;
 }
 
+#scrollbar{
+/* 	margin-left: 30%; */
+/* 	float: left; */
+	background: #F5F5F5;
+	overflow-y: auto;
+	margin-bottom: 1%;
+}
+#scrollbar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
 /********************************************************CLASSES*****************************************************/
 .introducing{
     margin: 2%;
@@ -142,9 +165,16 @@ img{
     display: inline-block;
     position: relative;
     float: left;
-    width: 30%;
+    width: 25%;
     height: 300px;
-	border: 1px solid darkolivegreen;
+/* 	border: 1px solid darkolivegreen; */
+	border-bottom: 1px solid darkolivegreen;
+	border-top: 1px solid darkolivegreen;
+	border-style: groove;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
     margin: 1%;
     padding: 0.5%;
     overflow-y: auto;

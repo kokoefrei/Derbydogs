@@ -74,17 +74,26 @@ img{
     display: inline-block;
     position: relative;
     float: left;
-    width: 97s%;
-    overflow: auto;
-	border: 1px solid darkolivegreen; 
-    padding: 1%;
-    text-align: center;
+    width: 97%;
+	height: 20%;
+	width: 100%;
+	overflow: auto;
+	border-bottom: 1px solid darkolivegreen;
+	border-top: 1px solid darkolivegreen;
+	border-style: groove;
+	border-style: groove;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
+	background-color: gray;
+	font-family: sans-serif,cursive;
     text-shadow: 2px 2px lightblue;
-    font-family: sans-serif,cursive;
-    font-size-adjust: auto;
     font-stretch: expanded;
     font-style: italic;
-    font-size: 160%;
+    font-size: 150%;
+    text-align: center;
+    font-weight: bolder;
     
 }
 #navFoot{
@@ -96,6 +105,29 @@ img{
     height: 40%;   
 	background-color: antiquewhite;
 	margin-top: 1%;
+}
+#scrollbar{
+/* 	margin-left: 30%; */
+/* 	float: left; */
+	background: #F5F5F5;
+	overflow-y: auto;
+	margin-bottom: 1%;
+}
+#scrollbar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
 }
 
 /*
@@ -148,10 +180,17 @@ img{
     display: inline;
     position: inherit;
     float: left;
-    width: 30%;
+    width: 25%;
     height: 300px;
     overflow: auto;
-	border: 1px solid darkolivegreen;
+/* 	border: 1px solid darkolivegreen; */
+	border-bottom: 1px solid darkolivegreen;
+	border-top: 1px solid darkolivegreen;
+	border-style: groove;
+	border-bottom-left-radius: 0.5em;
+	border-bottom-right-radius: 0.5em;
+	border-top-left-radius: 0.5em;
+	border-top-right-radius: 0.5em;
     margin: 0.5%;
     padding: auto;
     font-family: sans-serif,cursive;
@@ -168,15 +207,6 @@ img{
     height: 250px;
     width: 100%;
 }
-
-
-
-
-
-
-
-
-
 
 .scroll{
 	clear: both;

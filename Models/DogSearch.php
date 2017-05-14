@@ -94,7 +94,8 @@
 				Where d.Age = :age
 				AND Adopted = 0
 				AND d.Color = c.ColorId
-				AND ColorName = :color ";
+				AND ColorName = :color 
+				ORDER BY Name";
 		$stmt = $pdo->prepare($sql);
 		$stmt->bindParam(':age', $bdate);
 		$stmt->bindParam(':color', $color);

@@ -32,7 +32,7 @@
                 Derby Dogs is a dog rescue centre located in Derby. They allow people to sponsor dogs for a set amount of money per month, and allow people to request to adopt dogs.
             </div>
             
-            <div class="article">
+            <div class="article" id="scrollbar">
             	<h2><?php echo $news[0][1]?></h2>
             	<p>Published Date : <?php echo $news[0][0]?></p>
                 <!-- <img src="../Img/sufferingDog.jpg" alt="sad Dog"> -->
@@ -40,7 +40,7 @@
                 <?php echo $news[0][3]?>
             </div>
             
-            <div class="article">
+            <div class="article" id="scrollbar">
                 <h2><?php echo $news[1][1]?></h2>
             	<p>Published Date : <?php echo $news[1][0]?></p>
                 <!-- <img src="../Img/sufferingDog.jpg" alt="sad Dog"> -->
@@ -48,7 +48,7 @@
                 <?php echo $news[1][3]?>
             </div>
             
-            <div class="article">
+            <div class="article" id="scrollbar">
                 <h2><?php echo $news[2][1]?></h2>
             	<p>Published Date : <?php echo $news[2][0]?></p>
                 <!-- <img src="../Img/sufferingDog.jpg" alt="sad Dog"> -->
@@ -56,7 +56,7 @@
                 <?php echo $news[2][3]?>
             </div>
             
-            <div class="article">
+            <div class="article" id="scrollbar">
                 <h2><?php echo $news[3][1]?></h2>
             	<p>Published Date : <?php echo $news[3][0]?></p>
                 <!-- <img src="../Img/sufferingDog.jpg" alt="sad Dog"> -->
