@@ -45,7 +45,7 @@
                             <label for="dogName">Dog's name</label>
                             <input type="text" name="nom" placeHolder="Mike-robby" required
                                 pattern="[A-Za-z-\s]+" title="DogName" id="dogName">
-                            <input type="submit" name="submit" value="Search">
+                            <input type="submit" name="submit1" value="Search">
                         </div>
                     </fieldset>
                 </form>
@@ -96,7 +96,7 @@
                 </form>
             </div>
             <?php    
-			     if (isset($_POST['submit']))
+			     if (isset($_POST['submit1']))
 				{
 					extract($_POST);
 					
@@ -106,13 +106,13 @@
 						echo '<div class="baniere"> Results of your search by name : </div>';
 						while ($i < sizeOf($nameResult)){
 							echo '<div class="result" id="scrollbar">
-								<h2> NAME: '.$nameResult[$i][0].'</h2>
-								<p> AGE: '.$nameResult[$i][1].' years</p>
-								<p> GENDER: '.$nameResult[$i][3].'</p>
-								<p><img src="'.$nameResult[$i][2].'" alt="not adopted dog"></p>
+								<h2> NAME: '.$nameResult[$i][1].'</h2>
+								<p> AGE: '.$nameResult[$i][2].' years</p>
+								<p> GENDER: '.$nameResult[$i][4].'</p>
+								<p><img src="'.$nameResult[$i][3].'" alt="not adopted dog"></p>
 			            		<p>
-									DESCRIPTION: '.$nameResult[$i][4].'
-									<a href="'.$nameResult[$i][2].'">...READ MORE</a>
+									DESCRIPTION: '.$nameResult[$i][5].'
+									<a href="ReadMore.php?page='.$nameResult[$i][0].'">...READ MORE</a>
 			            		</p>
 		            			</div>';
 							$i++;
@@ -133,13 +133,13 @@
         				elseif (sizeOf($breedResult > 0)) {
         					while ($i < sizeOf($breedResult)){
         						echo '<div class="result" id="scrollbar">
-								<h2> NAME: '.$breedResult[$i][0].'</h2>
-								<p> AGE: '.$breedResult[$i][1].' years</p>
-								<p> GENDER: '.$breedResult[$i][3].'</p>
-								<p><img src="'.$breedResult[$i][2].'" alt="not adopted dog"></p>
+								<h2> NAME: '.$breedResult[$i][1].'</h2>
+								<p> AGE: '.$breedResult[$i][2].' years</p>
+								<p> GENDER: '.$breedResult[$i][4].'</p>
+								<p><img src="'.$breedResult[$i][3].'" alt="not adopted dog"></p>
 			            		<p>
-									DESCRIPTION: '.$breedResult[$i][4].'
-									<a href="'.$breedResult[$i][2].'">...READ MORE</a>
+									DESCRIPTION: '.$breedResult[$i][5].'
+									<a href="ReadMore.php?page='.$breedResult[$i][0].'">...READ MORE</a>
 			            		</p>
 		            			</div>';
         						$i++;
@@ -158,13 +158,13 @@
 						echo '<div class="baniere"> Results of your age & color search : </div>';
 						while ($i < sizeOf($complexResult)){
 							echo '<div class="result" id="scrollbar">
-								<h2> NAME: '.$complexResult[$i][0].'</h2>
-								AGE: '.$complexResult[$i][1].' years
-								-GENDER: '.$complexResult[$i][3].'
-								<p><img src="'.$complexResult[$i][2].'" alt="not adopted dog"></p>
+								<h2> NAME: '.$complexResult[$i][1].'</h2>
+								AGE: '.$complexResult[$i][2].' years
+								-GENDER: '.$complexResult[$i][4].'
+								<p><img src="'.$complexResult[$i][3].'" alt="not adopted dog"></p>
 			            		<p>
-									DESCRIPTION: '.$complexResult[$i][4].'
-									<a href="'.$complexResult[$i][2].'">...READ MORE</a>
+									DESCRIPTION: '.$complexResult[$i][5].'			
+									<a href="ReadMore.php?page='.$complexResult[$i][0].'">...READ MORE</a>
 			            		</p>
 		            			</div>';
 							$i++;

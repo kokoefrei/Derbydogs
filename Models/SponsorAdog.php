@@ -4,7 +4,7 @@
 	function doglist(){
 		$pdo = initDB();
 		
-		$sql = "SELECT DISTINCT Name, Age, Picture, Gender, Description
+		$sql = "SELECT DISTINCT d.DogId, Name, Age, Picture, Gender, Description
 				FROM sponsordog sd, dog d
 				WHERE sd.DogId = d.DogId
 				AND d.Adopted = 0

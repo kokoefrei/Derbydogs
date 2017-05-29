@@ -5,7 +5,7 @@
 	function nameSearch($text)
 	{
 		$pdo = initDB();
-		$sql = "SELECT Name, Age, Picture, Gender, Description 
+		$sql = "SELECT DogId, Name, Age, Picture, Gender, Description 
 				FROM dog
 				WHERE Name like '%$text%' 
 				AND Adopted = 0
@@ -89,7 +89,7 @@
 	
 	function complexSearch($bdate, $color){
 		$pdo = initDB();
-		$sql = "SELECT Name, Age, Picture, Gender, d.Description
+		$sql = "SELECT DogId, Name, Age, Picture, Gender, d.Description
 				FROM dog d, color c
 				Where d.Age = :age
 				AND Adopted = 0
@@ -111,7 +111,7 @@
 	
 	function breedSearch($breed){
 		$pdo = initDB();
-		$sql = "SELECT Name, Age, Picture, Gender, d.Description
+		$sql = "SELECT DogId, Name, Age, Picture, Gender, d.Description
 		FROM dog d, breed b
 		WHERE d.Breed = b.BreedId
 		AND BreedName = :breed

@@ -40,21 +40,22 @@
                     <li>Choose a dog by clicking on the button below</li>
                     <li>Sponsoring this big and beautiful hairball</li>
                 </ol>
-                <a href="DogSearch.html">
+                <a href="DogSearch.php">
                     <input type="button" value="Choose a dog">
                 </a>
             </div>
             <?php
+//             	print_r($listdog);
 	            $i = 1;
 	            while ($i < sizeOf($listdog)){
 	            	echo '<div class="article" id="scrollbar">
-									<h2> NAME: '.$listdog[$i][0].'</h2>
-									<p> AGE: '.$listdog[$i][1].' years</p>
-									<p> GENDER: '.$listdog[$i][3].'</p>
-									<p><img src="'.$listdog[$i][2].'" alt="not adopted dog"></p>
+									<h2> NAME: '.$listdog[$i][1].'</h2>
+									<p> AGE: '.$listdog[$i][2].' years</p>
+									<p> GENDER: '.$listdog[$i][4].'</p>
+									<p><img src="'.$listdog[$i][3].'" alt="not adopted dog"></p>
 				            		<p>
-										DESCRIPTION: '.$listdog[$i][4].'
-										<a href="'.$listdog[$i][2].'">...READ MORE</a>
+										DESCRIPTION: '.$listdog[$i][5].'
+										<a href="ReadMore.php?page='.$listdog[$i][0].'">...READ MORE</a>
 				            		</p>
 			            			</div>';
 	            	$i++;
